@@ -1,6 +1,6 @@
 {
   "name": "react-router-mui-integration",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Integration of React Router and Material UI (MUI).",
   "keywords": [
     "react-router",
