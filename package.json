@@ -1,0 +1,68 @@
+{
+  "name": "react-router-mui-integration",
+  "version": "0.0.0",
+  "description": "Integration of React Router and Material UI (MUI).",
+  "keywords": [
+    "react-router",
+    "remix",
+    "mui",
+    "material-ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnoSaine/react-router-mui-integration.git"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Arno Saine",
+    "email": "arno@mowhi.com"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./lib/main.js",
+    "./mui": "./lib/mui/index.js",
+    "./react-router/dom": "./lib/react-router/dom.js",
+    "./react-dom/server": "./lib/react-dom/server.js",
+    "./mapRoutes": "./lib/mapRoutes.js",
+    "./preset": "./lib/preset.js",
+    "./vite": "./lib/vite.js"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "workspaces": [
+    ".",
+    "example"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.lib.json",
+    "dev": "npm run build -- --watch",
+    "release": "npm run build && npm test && changeset version && changeset publish",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test './src/**/*.test.ts'",
+    "typecheck": "npm run build -- --noEmit"
+  },
+  "dependencies": {
+    "@swc/core": "^1.9.3",
+    "folder-hash": "^4.0.4",
+    "warn-once": "^0.1.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.10",
+    "@types/folder-hash": "^4.0.4",
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  },
+  "optionalDependencies": {
+    "@emotion/cache": "*",
+    "@emotion/react": "*",
+    "@emotion/server": "*",
+    "@emotion/styled": "*",
+    "@mui/material": "*",
+    "@mui/utils": "*",
+    "@react-router/dev": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*"
+  }
+}
