@@ -64,5 +64,9 @@
     "react": "*",
     "react-dom": "*",
     "react-router": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
   }
 }
